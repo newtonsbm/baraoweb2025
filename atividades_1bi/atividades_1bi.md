@@ -4,7 +4,7 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 
 ## TLDR
 
-- [1. A1 Git: Compreender como funciona o git e aplicar conceitos de versionamento de código](#a1---git)
+- [A1 Git: Compreender como funciona o git e aplicar conceitos de versionamento de código](#a1---git)
 
 ## A1 - Git
 
