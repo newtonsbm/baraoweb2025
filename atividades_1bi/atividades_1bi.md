@@ -7,6 +7,7 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 - [1. A1 Git - Compreender como funciona o git e aplicar conceitos de versionamento de código](#a1---git)
 - [2. A2 Introdução ao HTML e CSS - Desenvolver uma página HTML simples com estilização básica](#a2---introdução-ao-html-e-css)
 - [3. A3 Tags Semânticas e Layout HTML - Utilizar tags semânticas e box model do CSS para reproduzir diferentes tipos de layout](#a3---tags-semânticas-e-layout-html)
+- [4. A4 Flexbox e Responsividade - Implementar um layout de página utilizando flexbox e torná-lo responsivo](#a4---flexbox-e-responsividade)
 
 ## A1 - Git
 
@@ -223,3 +224,76 @@ Vamos utilizar as tags estruturais semânticas do HTML e box model do CSS, assim
     - Utilize `margin: 0 auto` para centralizar elementos com `width` definido
 - Centralizando elementos verticalmente:
     - `align-content: center` em um elemento com `display: block` e `height` definido 
+
+## A4 - Flexbox e Responsividade
+
+### Resumo dos Conceitos Importantes
+
+- Flexbox é um modelo de layout bidimensional que permite a criação de layouts complexos e flexíveis
+- Flexbox é baseado em um container e seus itens filhos (flex items)
+- O container é definido com `display: flex` 
+- Os itens filhos são dispostos em uma linha (row) ou coluna (column) por meio da propriedade `flex-direction` e podem ser alinhados e distribuídos de diversas formas
+- Layouts responsivos são aqueles que se adaptam a diferentes tamanhos de tela e dispositivos
+- Para criar layouts responsivos, podemos utilizar media queries, que são regras CSS que se aplicam apenas quando determinadas condições são atendidas
+- As media queries são definidas com `@media` e podem ser usadas para alterar o layout, estilo e comportamento dos elementos em diferentes tamanhos de tela
+
+### Flexbox
+- Para utilizar Flexbox, primeiro definimos um container pai com `display: flex`
+- Os itens filhos do container são chamados de flex items
+- A seguir, um exemplo de container com as propriedades mais comuns do Flexbox e seus valores default:
+
+```css
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+```
+
+```html
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+</div>
+```
+
+- As principais propriedades do Flexbox, aplicadas ao elemento pai (container), são:
+    - `display`: define o container como um flex container
+    - `flex-direction`: define a direção dos itens no container (row, row-reverse, column, column-reverse)
+    - `flex-wrap`: define se os itens devem quebrar ou não em várias linhas (nowrap, wrap, wrap-reverse)
+    - `justify-content`: alinha os itens ao longo do eixo principal (flex-start, flex-end, center, space-between, space-around, space-evenly)
+    - `align-items`: alinha os itens ao longo do eixo transversal (stretch, flex-start, flex-end, center, baseline)
+    - `align-content`: alinha as linhas de itens ao longo do eixo transversal (stretch, flex-start, flex-end, center, space-between, space-around)
+- As principais propriedades do Flexbox, aplicadas aos elementos filhos (flex items), são:
+    - `flex-grow`: define a capacidade de crescimento do item
+    - `flex-shrink`: define a capacidade de encolhimento do item
+    - `flex-basis`: define o tamanho base do item
+    - `flex`: atalho para `flex-grow`, `flex-shrink` e `flex-basis`
+    - `order`: define a ordem dos itens no container
+
+### Responsividade
+- Para criar layouts responsivos, podemos utilizar media queries
+- As media queries são regras CSS que se aplicam apenas quando determinadas condições são atendidas
+- As media queries são definidas com `@media` e podem ser usadas para alterar o layout, estilo e comportamento dos elementos em diferentes tamanhos de tela
+- A seguir, um exemplo de media query que altera a cor do texto para vermelho em telas menores que 600px:
+
+```css
+@media (width < 600px) {
+    body {
+        color: red;
+    }
+}
+```
+
+### Atividades
+
+- Escolha 1 layout de página para implementar utilizando flexbox
+- Pode se basear em um dos layouts seguintes: https://www.figma.com/design/Fzpxk9W4nwNlPKzARlRDxS/Web---Layouts?node-id=3209-679
+- Construa o layout utilizando Flexbox (`display: flex` no elemento pai)
+- Lembre-se de utilizar TAGS SEMÂNTICAS	para a construção do layout (`<header>`, `<nav>`, `<main>`, `<footer>`, etc)
+- Torne o layout responsivo para tela de celulares utilizando media queries: dessa forma o layout tera duas versões, a versão desktop e a mobile
+- Criar o arquivo do layout com seu nome (ex: Newton.html), commitar o arquivo e subir
