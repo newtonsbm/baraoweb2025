@@ -301,3 +301,82 @@ Vamos utilizar as tags estruturais semânticas do HTML e box model do CSS, assim
 ### Desafio
 - Veja o material sobre Grid Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout 
 - Tente implementar o mesmo layout utilizando Grid Layout
+
+## A5 - Frameworks CSS e Formulários
+
+### Resumo dos Conceitos Importantes
+
+- Frameworks CSS são conjuntos de estilos pré-definidos que facilitam a criação de páginas web
+- Alguns frameworks CSS mais populares são: Bootstrap, Tailwind, DaisyUI, Semantic CSS, etc
+- Além de estilos prontos, os frameworks CSS também oferecem componentes prontos como botões, formulários, cards, etc
+- Muitos frameworks também permitem a utilização de temas personalizados, sendo um ótimo recurso para padronização de estilos
+- Formulários são elementos HTML que permitem a coleta de informações dos usuários
+- Por meio de formulários, os usuários podem inserir, enviar e editar dados 
+
+### Frameworks CSS
+
+- A vantagem de utilizar um framework CSS é a economia de tempo e esforço na criação de estilos
+- Além disso, muitos os frameworks CSS são responsivos por padrão, ou seja, os estilos se adaptam a diferentes tamanhos de tela
+- Podemos categorizar frameworks CSS em dois tipos: semânticos e utilities (utilitários)
+- Frameworks Semânticos são aqueles que utilizam classes com nomes significativos para estilizar os elementos HTML
+    - Exemplos de frameworks semânticos são: Bootstrap, Semantic CSS, Foundation, etc
+    - Cada classe tem um significado específico por exemplo `btn` para botões, `container` para containers, `row` para linhas, `col` para colunas, etc
+    - As classes são aplicadas diretamente nos elementos HTML
+    - Exemplo de uso do Bootstrap: `<button class="btn btn-primary">Primary</button>`
+    - A desvantagem dos frameworks semânticos é a dificuldade de customização e a possibilidade de conflitos de estilos
+    - A vantagem é a facilidade de uso, documentação e padronização de estilos
+- Frameworks Utilitários são aqueles que utilizam classes com nomes abreviados para propriedades CSS específicas como cores, tamanhos, espaçamentos, etc
+    - Exemplos de frameworks utilitários são: Tailwind, TacoCSS, etc
+    - Cada classe aplica uma propriedade CSS específica, por exemplo `bg-blue-500` para cor de fundo azul, `text-white` para texto branco, `font-bold` para fonte negrito, etc
+    - Exemplo de uso do Tailwind: `<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Primary</button>`
+    - A desvantagem dos frameworks utilitários é a dificuldade de leitura e manutenção do código
+    - A vantagem é a flexibilidade, rápida prototipação e localização de estilos (locality of behavior)
+- Muitos frameworks CSS oferecem uma mistura de classes semânticas e utilitárias, permitindo a escolha do melhor estilo para cada situação 
+    - O próprio Bootstrap oferece classes utilitárias como `text-center`, `m-4`, `p-4`, etc. Embora tenha nascido como um framework semântico
+    - DaisyUI é um framework que se baseia no Tailwind, proporcionando diversos componentes prontos e oferecendo classes semânticas como `btn`, `container`, `row`, `col`, etc.
+
+### Formulários
+
+- Forms HTML são elementos que permitem a coleta de informações dos usuários
+- Existem vários tipos de elementos para entrada de dados tais como:
+    - `input`: para entrada de texto, senha, email, número, etc
+    - `textarea`: para entrada de texto longo
+    - `select`: para seleção de opções
+    - `radio`: para seleção de opções em botões de rádio
+    - `checkbox`: para seleção de opções em caixas de seleção
+    - `button`: para envio de formulários
+- Além dos elementos de entrada de dados, os formulários também podem conter elementos de agrupamento como:
+    - `fieldset`: para agrupar elementos relacionados
+    - `legend`: para descrever o agrupamento
+- Um atributo do elemento de entrada super importante para capturar os dados do formulário é o `name`, que é o nome do campo que será enviado para o servidor
+
+```html 
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name_user">
+```
+- No exemplo acima o campo de entrada de texto tem o nome `name_user` que será enviado para o servidor
+
+- Outro atributo importante, porém do form, é o `action`, que é o endereço para onde os dados do formulário serão enviados
+- O atributo `method` define o método de envio dos dados, podendo ser `GET` ou `POST`
+- O método `GET` envia os dados do formulário como uma string anexada à URL
+- O método `POST` envia os dados do formulário no corpo da requisição
+
+```html
+    <form action="/cadastrar_user" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name_user">
+        <button type="submit">Submit</button>
+    </form>
+```
+- No exemplo acima, o formulário será enviado para a rota `/cadastrar_user` via método `POST` com o campo `name_user` preenchido
+
+### Atividades
+
+- Escolha um framework CSS (Bootstrap, Tailwind, DaisyUI, Semantic UI, Pure CSS, etc) e implemente um formulário utilizando o framework escolhido
+- Cada pessoa do grupo deve implementar um formulário diferente
+- Pode-se utilizar o seguinte figma como referência: https://www.figma.com/design/Fzpxk9W4nwNlPKzARlRDxS/Web---Layouts?node-id=3259-13239 
+- Criar o arquivo do formulário com seu nome (ex: Newton.html), commitar o arquivo e subir
+
+## Desafio
+- Tente submeter esse formulário para o serviço gratuito: https://formsubmit.co/
+- Verifique como os dados chegam no seu email dependendo do tipo de formulário que você implementou
