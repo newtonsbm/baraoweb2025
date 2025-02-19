@@ -297,3 +297,7 @@ Vamos utilizar as tags estruturais semânticas do HTML e box model do CSS, assim
 - Lembre-se de utilizar TAGS SEMÂNTICAS	para a construção do layout (`<header>`, `<nav>`, `<main>`, `<footer>`, etc)
 - Torne o layout responsivo para tela de celulares utilizando media queries: dessa forma o layout tera duas versões, a versão desktop e a mobile
 - Criar o arquivo do layout com seu nome (ex: Newton.html), commitar o arquivo e subir
+
+### Desafio
+- Veja o material sobre Grid Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout 
+- Tente implementar o mesmo layout utilizando Grid Layout
