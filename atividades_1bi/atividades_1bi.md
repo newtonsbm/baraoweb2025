@@ -8,6 +8,7 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 - [2. A2 Introdução ao HTML e CSS - Desenvolver uma página HTML simples com estilização básica](#a2---introdução-ao-html-e-css)
 - [3. A3 Tags Semânticas e Layout HTML - Utilizar tags semânticas e box model do CSS para reproduzir diferentes tipos de layout](#a3---tags-semânticas-e-layout-html)
 - [4. A4 Flexbox e Responsividade - Implementar um layout de página utilizando flexbox e torná-lo responsivo](#a4---flexbox-e-responsividade)
+- [5. A5 Frameworks CSS e Formulários - Implementar um formulário utilizando um framework CSS](#a5---frameworks-css-e-formulários)
 
 ## A1 - Git
 
