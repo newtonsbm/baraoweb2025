@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: lightgreen;
+    }
+    header{ 
+      background-color: blue;
+      padding: 1em;
+    }
+    section.hero{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
+
+      h1{
+        width: 40%;
+      }
+      img{
+        width: 40%;
+      }
+    }
+    main{
+      background-color:yellow;
+      flex-grow: 1;
+      padding: 2em;
+    }
+    footer{
+      background-color: red;
+      padding: 1em;
+      text-align: center;
+    }
+
+    @media (width < 400px){
+      section.hero{
+        padding: .5em;
+        flex-direction: column;
+        text-align: center;
+        h1{
+          width: 100%;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>LOGO DO SITE</span>
+  </header>  
+  <section class="hero">
+    <h1>HERO</h1>
+    <img src="https://placehold.co/600x400" alt="Imagem de exemplo">
+  </section>
+  <main>
+    <article>
+      <h1>TITULO</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sint accusamus architecto itaque dolorem facere earum porro obcaecati iusto! Quos a reiciendis quia? Recusandae qui temporibus voluptatum voluptas, assumenda facilis.</p>
+    </article>
+  </main>
+  <footer>
+    <p>FOOTER</p>
+  </footer>
+</body>
+</html>
