@@ -9,6 +9,7 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 - [3. A3 Tags Semânticas e Layout HTML - Utilizar tags semânticas e box model do CSS para reproduzir diferentes tipos de layout](#a3---tags-semânticas-e-layout-html)
 - [4. A4 Flexbox e Responsividade - Implementar um layout de página utilizando flexbox e torná-lo responsivo](#a4---flexbox-e-responsividade)
 - [5. A5 Frameworks CSS e Formulários - Implementar um formulário utilizando um framework CSS](#a5---frameworks-css-e-formulários)
+- [6. A6 Javascript DOM e Eventos - Implementar um jogo simples utilizando javascript e manipulação do DOM](#a6---javascript-dom-e-eventos)
 
 ## A1 - Git
 
@@ -381,3 +382,115 @@ Vamos utilizar as tags estruturais semânticas do HTML e box model do CSS, assim
 ## Desafio
 - Tente submeter esse formulário para o serviço gratuito: https://formsubmit.co/
 - Verifique como os dados chegam no seu email dependendo do tipo de formulário que você implementou
+
+## A6 - Javascript DOM e Eventos
+
+### Resumo dos Conceitos Importantes
+
+Javascript é uma linguagem de programação de alto nível, interpretada, orientada a objetos e multi-paradigma. Ela é a linguagem padrão executada nos navegadores web e permite a criação de páginas web interativas.
+DOM (Document Object Model) é uma interface de programação que representa a estrutura de um documento HTML como uma árvore de objetos.
+A manipulação do DOM é feita por meio de métodos e propriedades que permitem a criação, remoção, alteração e leitura de elementos HTML.
+Eventos são ações que ocorrem em um documento HTML, como cliques, teclas pressionadas, movimentos do mouse, etc.
+Os eventos são tratados por meio de event handlers, que são funções que são executadas quando um evento ocorre.
+
+### Introdução ao Javascript
+
+- ECMA Script é a especificação padrão da linguagem Javascript
+- Javascript pode ser executada no navegador ou no servidor (Node.js)
+- Vamos focar em Javascript no navegador, ou seja, no client-side principalmente para manipulação do DOM e eventos
+- Podemos incluir o Javascript de três formas: inline, interno e externo
+- Inline é quando o código Javascript é incluído diretamente no HTML:
+
+```html
+    <button onclick="alert('Hello World!')">Click me</button>
+```
+
+- Interno é quando o código Javascript é incluído dentro de uma tag `<script>` no HTML:
+
+```html
+    <script>
+        alert('Hello World!');
+    </script>
+```
+
+- Externo é quando o código Javascript é incluído em um arquivo separado e referenciado no HTML:
+
+```html
+    <script src="script.js"></script>
+```
+```javascript
+    alert('Hello World!');
+```
+
+### Manipulando o DOM
+
+- Para manipular o DOM, utilizamos o objeto `document` que representa o documento HTML
+- Podemos acessar elementos HTML por meio de métodos como `getElementById`, `getElementsByClassName`, `getElementsByTagName`, `querySelector`, `querySelectorAll`
+- Exemplo:
+
+```html
+    <div id="div1">Hello World!</div>
+    <div class="div2">Div com Class!</div>
+    <div class="container">
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+    </div>
+    <script>
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementsByClassName('div2');
+        const ps_container = document.querySelectorAll('.container p');
+    </script>
+```	
+
+- Podemos alterar o conteúdo, estilo e atributos dos elementos HTML por meio de propriedades como `innerHTML`, `innerText`, `style`, `setAttribute`, etc
+- Exemplo:
+
+```html
+    <div id="div1">Hello World!</div>
+    <script>
+        const div1 = document.getElementById('div1');
+        div1.innerHTML = 'Olá Mundo!';
+        div1.style.color = 'red';
+        div1.setAttribute('class', 'nova-classe');
+    </script>
+```
+
+- Podemos criar, adicionar e remover elementos HTML por meio de métodos como `createElement`, `appendChild`, `removeChild`, etc
+- Exemplo:
+
+```html
+    <div id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+        const p = document.createElement('p');
+        p.innerText = 'Novo Parágrafo';
+        container.appendChild(p);
+    </script>
+```
+
+### Eventos
+
+- Eventos são ações que ocorrem em um documento HTML, como cliques, teclas pressionadas, movimentos do mouse, etc
+- Podemos tratar eventos por meio de event handlers, que são funções que são executadas quando um evento ocorre
+- Exemplo:
+
+```html
+    <button id="btn">Click me</button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            alert('Hello World!');
+        });
+    </script>
+```
+
+### Atividades
+
+- Essa atividade pode ser feita em duplas e somente 1 dos integrantes precisa submeter mas ambos precisam ter entrado no repositório do classroom 
+- Vamos realizar um pequeno gamejam e criar um jogo simples utilizando javascript e manipulação do DOM
+- Pode ser super simples ou mais complexo o importante é treinar a manipulação do DOM e eventos em javascript
+- Veja os exemplos disponíveis na pasta "exemplos"
+
+### Desafios 
+- Suba e hospede o seu jogo no github pages, mostre para todos no final da aula
+
