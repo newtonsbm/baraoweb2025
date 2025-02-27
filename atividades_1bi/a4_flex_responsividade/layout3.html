@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 3</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+    }
+    section {
+      flex-grow:0;
+      width: 50%;
+      height: 100vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    main {
+      flex-grow: 0;
+      width: 50%;
+      padding: 3rem;
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+
+        a {
+          display: block;
+          text-align: center;
+          padding: .5rem 0;
+          border: 1px solid blue;
+          width: 45%
+        }
+      }
+    }
+
+    @media (width < 400px) {
+      body {
+        flex-direction: column;
+      }
+      section {
+        width: 100%;
+        height: 30vh;
+      }
+      main {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5rem;
+
+        article {
+          padding: 1rem;
+        }
+
+        .actions {
+          flex-direction: column;
+          gap: .5rem;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <img src="https://picsum.photos/400/800" alt="">
+  </section>
+  <main>
+    <article>
+      <h1>Titulo</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad, impedit repellat optio nam, recusandae perspiciatis laudantium, corporis sit temporibus mollitia? Dolor nulla temporibus nobis molestiae nesciunt commodi distinctio fuga.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste ducimus, illum laudantium excepturi natus corporis voluptas adipisci explicabo, quidem debitis aliquam, culpa doloribus? Nostrum mollitia magnam obcaecati officiis ratione.</p>
+      <div class="actions">
+        <a href="">Botao 1</a>
+        <a href="">Botao 2</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

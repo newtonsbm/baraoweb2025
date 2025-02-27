@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layou2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main{
+      display: flex;
+      flex-grow: 1;
+    }
+    main nav {
+      background-color: lightskyblue;
+      flex-grow: 0;
+      width:20vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      a.logo{
+        display: block;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid black;
+        margin: 2rem 0;
+      }
+
+      ul {
+        gap: 1rem;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      ul a {
+        text-decoration: none;
+        display: block;
+        color: black;
+        padding: .75rem;
+
+        &:hover{
+          background-color: black;
+          color: white;
+        }
+      }
+
+    }
+    main section.dash {
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    main section.dash table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead{
+        background-color: black;
+        color: white;
+      }
+      thead th, tbody td{
+        padding: 0.5rem;
+      }
+    }
+
+    footer{
+      flex-grow: 0;
+      background-color: black;
+      color: white;
+      text-align: center;
+      align-items: center;
+      height: 20vh
+    }
+
+    @media( width < 400px){
+      main{
+        flex-direction: column;
+
+        nav{
+          width: 100%;
+        }
+        nav ul{
+          flex-direction: row;
+          overflow-x: auto;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href= "" class="logo">LOGO</a>
+      <ul>
+        <li><a href="">Link1</a></li>
+        <li><a href="">Link2</a></li>
+        <li><a href="">Link3</a></li>
+        <li><a href="">Link4</a></li>
+      </ul>
+    </nav>
+    <section class="dash">
+      <h1>Dashboard</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Origem</th>
+            <th>Idade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>Brasil</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>Brasil</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>Brasil</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>Brasil</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>Brasil</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>Copytright Newton</p>
+  </footer>
+</body>
+</html>
