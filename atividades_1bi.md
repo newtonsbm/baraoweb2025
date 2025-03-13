@@ -10,6 +10,8 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 - [4. A4 Flexbox e Responsividade - Implementar um layout de página utilizando flexbox e torná-lo responsivo](#a4---flexbox-e-responsividade)
 - [5. A5 Frameworks CSS e Formulários - Implementar um formulário utilizando um framework CSS](#a5---frameworks-css-e-formulários)
 - [6. A6 Javascript DOM e Eventos - Implementar um jogo simples utilizando javascript e manipulação do DOM](#a6---javascript-dom-e-eventos)
+- [7. A7 Tipos de Aplicações Web e Introdução ao Python e Django - Instalar o python e django e criar um projeto django](#a7---tipos-de-aplicações-web-e-introdução-ao-python-e-django)
+- [8. A8 Projeto Django e Rotas - Criar rotas e views em um projeto Django](#a8---projeto-django-e-rotas)
 
 ## A1 - Git
 
@@ -493,4 +495,125 @@ Os eventos são tratados por meio de event handlers, que são funções que são
 
 ### Desafios 
 - Suba e hospede o seu jogo no github pages, mostre para todos no final da aula
+
+## A7 - Tipos de Aplicações Web	e Introdução ao Python e Django
+
+### Resumo dos Conceitos Importantes
+- Existem vários tipos de aplicações web como: sites estáticos, SSG (Static Site Generators),  SSR (Server Side Rendering) e MPA (Multi Page Applications), CSR (Client Side Rendering) e SPA (Single Page Applications) e arquiteturas híbridas.
+- Sites estáticos são páginas web que não mudam de conteúdo, são simples e rápidos, mas não permitem interatividade
+- SSG (Static Site Generators) são geradores de sites estáticos que permitem a criação de sites dinâmicos a partir de arquivos estáticos
+- SSR (Server Side Rendering) é uma técnica de renderização de páginas web no servidor, ou seja, o conteúdo é gerado no servidor e enviado para o cliente resultando muitas vezes em uma MPA (Multi Page Applications), que são aplicações web que possuem várias páginas, cada uma com seu próprio conteúdo e estilo
+- CSR (Client Side Rendering) é uma técnica de renderização de páginas web no cliente, ou seja, o conteúdo é gerado no navegador do usuário, isso é muito utilizado em SPAs (Single Page Applications), que são aplicações web que possuem apenas uma página, o conteúdo é carregado dinamicamente por meio de JavaScript
+
+### Evoluindo a Aplicação Web
+- Até agora vimos como  páginas web estáticas, estilizadas e interativas com HTML, CSS e Javascript
+- Vamos partir para criação de uma aplicação web mais complexa, com interação com o servidor e banco de dados
+- Para isso vamos utilizar Python e Django, um framework web para desenvolvimento rápido e seguro de aplicações web
+- Vamos construir uma MPA (Multi Page Application) com Django
+
+### Frameworks Web
+- Um framework web é um conjunto de ferramentas, bibliotecas e padrões de projeto que facilitam o desenvolvimento de aplicações web
+- Podemos classificar os frameworks web em dois tipos: "opinionated" e "unopinionated"
+- Frameworks "opinionated" são aqueles que possuem uma forma de trabalhar bem definida, ou seja, eles têm uma opinião sobre como as coisas devem ser feitas. Possuem um padrão de projeto bem definido e são ótimos para desenvolvimento rápido e seguro
+- Frameworks "unopinionated" são aqueles que não possuem uma forma de trabalhar bem definida, ou seja, eles não têm uma opinião sobre como as coisas devem ser feitas. São mais flexíveis e permitem mais liberdade, mas podem ser mais difíceis de aprender e utilizar. Esses frameworks dependem mais de bibliotecas de terceiros e de padrões de projeto definidos pelo desenvolvedor.
+
+### Python e Django
+- Python é uma linguagem de programação de alto nível, interpretada, orientada a objetos e multi-paradigma
+- Essa linguagem é muito utilizada em diversas áreas como desenvolvimento web, ciência de dados, automação, devops, etc
+- Python é uma linguagem de fácil aprendizado e leitura, com uma sintaxe limpa e clara
+- Django é um framework web para desenvolvimento rápido e seguro de aplicações web
+- Seu moto é "The web framework for perfectionists with deadlines" (O framework web para perfeccionistas com prazos)
+- Django se define como um framework "battery-included", ou seja, ele vem com tudo que você precisa para desenvolver aplicações web, desde um ORM (Object-Relational Mapping) até um sistema de autenticação e autorização
+- Django segue o padrão de projeto MTV (Model-Template-View) que é semelhante ao padrão MVC (Model-View-Controller)
+- O Model é a camada de dados, o Template é a camada de apresentação e o View é a camada de lógica de negócio
+- O Django também possui um sistema de rotas, um sistema de administração, um sistema de formulários, um sistema de autenticação e autorização, um sistema de segurança, etc
+- Outras vantagens do Django são: documentação completa e detalhada, comunidade ativa e grande, facilidade de aprendizado, etc
+- Além disso, para iniciantes, Python e Django possuem uma comunidade ativa e grande e existem diversos grupos de usuários, eventos, conferências, cursos, tutoriais, documentação, etc
+- A comunidade Python e Django é conhecida por ser acolhedora, inclusiva e diversa
+- Alguns eventos e conferências Python e Django no Brasil são: Python Brasil, PyLadies, DjangoGirls, Caipyra, entre outros.
+
+### Atividades
+
+- Instale o python a partir do site oficial
+- *ATENÇÃO*: no WINDOWS marque a opção de adicionar o python ao PATH. Esse passo é importante para que você consiga rodar o python no terminal corretamente.
+- Instale o django: `pip install django`
+- Garanta que no terminal você esteja dentro do repositório do projeto
+- Crie um projeto django: `django-admin startproject nome_do_projeto`
+- No windows pode ser necessário usar `python -m django startproject nome_do_projeto` ou `py -m django startproject nome_do_projeto`
+- Entre na pasta do projeto: `cd nome_do_projeto`
+- Inicialize o servidor: `python manage.py runserver`
+
+## A8 - Projeto Django e Rotas
+
+### Resumo dos Conceitos Importantes
+
+Nesta atividade vamos criar de uma aplicação web fullstack. Diversos frameworks fullstack utilizam o padrão [MVC (Model-View-Controller)](https://developer.mozilla.org/en-US/docs/Glossary/MVC) que no caso particular do django utiliza uma variação desse modelo chamado [MVT (Model-View-Template)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction). 
+
+Todo framework de desenvolvimento web terá uma estrutura de pastas e arquivos que são necessários para o funcionamento do projeto. No caso do Django, temos a pasta do projeto principal que contém as configurações gerais (settings.py). Além disso todo framework também terá ferramentas de linha de comando (cli tools) que facilitam a criação de novos componentes do projeto além de outros utilitários. No caso do django essas ferramentas são o django-admin e o manage.py.
+
+Por fim, outro conceito importante é da modularização e reuso de código. Todo framework agrupará seu código em módulos que podem ser reutilizados em diferentes projetos. No caso do Django, esses módulos são chamados de aplicações e são criados a partir do comando `startapp` do manage.py.
+
+Outro conceito importante é o de *roteamento* das requisições. As rotas são responsáveis por mapear as URLs acessadas pelo usuário para o código que irá tratar dessa requisiçao. No django, as views são responsáveis por processar as requisições e retornar uma resposta ao usuário. No caso do Django, as views são funções que recebem um objeto `request` e retornam um objeto `response`.
+
+### Projeto Django
+
+- Instalar Python: https://www.python.org/downloads/
+- Dentro do repositório clonado
+- Instalar Django: `pip install -r requirement.txt` ou `py -m pip -r requirements.txt`
+- No Windows: `py -m django-admin startproject cafecompao` ou `python -m django startproject cafecompao`
+- Criar projeto Django: `django-admin startproject cafecompao` ou `py -m django startproject cafecompao`
+
+### Aplicação Django
+
+- Entrar na pasta criada do projeto: `cd cafecompao`
+- Criar aplicação Django: 
+`python manage.py startapp padarias` ou `py manage.py startapp padarias`
+- Adicionar aplicação ao projeto em `cafecompao/settings.py`
+
+```python
+	INSTALLED_APPS = [
+		'django.contrib.admin',
+		'django.contrib.auth',
+		'django.contrib.contenttypes',
+		'django.contrib.sessions',
+		'django.contrib.messages',
+		'django.contrib.staticfiles',
+		'padarias',  # adicionar essa linha
+]
+``` 
+
+- Verificar se está tudo ok rodando o servidor: `py manage.py runserver` e acessar a página `http://localhost:8000` no navegador
+
+### View e Rota Inicial
+- Criar view `home` em `padarias/views.py`
+
+```python
+from django.http import HttpResponse
+
+def home(request):
+  return HttpResponse('<h1>Olá Django!</h1>')
+```
+
+- Criar rota para view `home` em `cafecompao/urls.py`
+
+```python
+from padarias import views as padarias_views  # adicionar esse import no início
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', padarias_views.home, name='home'),   # adicionar essa linha
+]
+```
+
+### Atividade
+
+- Instalar o django a partir do `requirements.txt` do projeto
+- `pip install -r requirements.txt`
+- Criar o projeto e subir a pasta ‘cafecompao’
+- A atividade consiste em realizar os passos de criação da aplicação ‘padarias’ vistas na aula
+- `python manage.py startapp padarias`
+- Comando alternativo: `py manage.py startapp padarias`
+- Criar uma nova view 'sobre' na aplicação padarias que retorna a string 'Página em construção' e realizar a configuração da rota para a url /catalogo/sobre 
+- `python manage.py run_server`
+- Testar a aplicação ver se esta tudo OK acessando ‘localhost:8000/padarias  e localhost:8000/padarias/sobre
 
