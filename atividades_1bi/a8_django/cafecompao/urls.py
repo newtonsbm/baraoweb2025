@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 from padarias import views as padarias_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', padarias_views.home),
-    path('contato/', padarias_views.contato),   
+    path('', padarias_views.home, name='home'),
+    path('contato/', padarias_views.contato, name='contato'),
 ]
