@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Django Starter{% endblock %}
+
+{% block content %}
+<div class="hero min-h-screen" style="background-image: url('{% static "images/pixelart-background.webp" %}');">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Django Starter</h1>
+      <p class="mb-5">Este é um projeto starter em Django do curso de Ciência da Computação - Barão de Mauá</p>
+      <div class="mt-6">
+        <ul class="list-inside text-white">
+          <li>Django</li>
+          <li>Tailwind CSS</li>
+          <li>DaisyUI</li>
+          <li>Bootstrap Icons</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

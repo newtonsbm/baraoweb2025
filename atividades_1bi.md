@@ -540,7 +540,7 @@ Os eventos são tratados por meio de event handlers, que são funções que são
 - Instale o django: `pip install django`
 - Garanta que no terminal você esteja dentro do repositório do projeto
 - Crie um projeto django: `django-admin startproject nome_do_projeto`
-- No windows pode ser necessário usar `python -m django startproject nome_do_projeto` ou `py -m django startproject nome_do_projeto`
+- Caso de erro o comanodo anterior - no windows pode ser necessário usar `python -m django startproject nome_do_projeto` ou `py -m django startproject nome_do_projeto`
 - Entre na pasta do projeto: `cd nome_do_projeto`
 - Inicialize o servidor: `python manage.py runserver`
 
@@ -631,10 +631,9 @@ No Django, a composição de templates é feita através de tags e filtros que p
 
 ### Modificações realizadas no projeto
 
-- Criar a pasta `templates` na pasta da aplicação `padarias`
+- Criar a pasta `templates` na raiz do projeto 
 - Criar a pasta `components` dentro da pasta `templates`
-- Instalar o plugin `django-browser-reload` para recarregar automaticamente o navegador quando houver alterações nos arquivos do projeto
-- Copiar as imagens para a pasta `static/images`
+- Copiar as imagens da pasta `prototipo` para a pasta `static/images`
 - Criar o arquivo css `main.css` na pasta `static/css`
 
 ### Criar Componentes de Cabeçalho e Rodapé
