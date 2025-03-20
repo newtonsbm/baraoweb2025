@@ -13,6 +13,7 @@ Prof. Newton Miyoshi - newton.miyoshi@baraodemaua.br
 - [7. A7 Tipos de Aplicações Web e Introdução ao Python e Django - Instalar o python e django e criar um projeto django](#a7---tipos-de-aplicações-web-e-introdução-ao-python-e-django)
 - [8. A8 Projeto Django e Rotas - Criar rotas e views em um projeto Django](#a8---projeto-django-e-rotas)
 - [9. A9 Composição de Templates e Componentes e Arquivos Estáticos - Criar templates e componentes em um projeto Django](#a9---composição-de-templates-e-componentes-e-arquivos-estáticos)
+- [10. A10 Formulários e Envio de Dados - Criar formulários e processar os dados no servidor](#a10---formulários-e-envio-de-dados)
 
 ## A1 - Git
 
@@ -827,14 +828,33 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 - Criar o arquivo `templates/contato.html` para herdar do template base `base.html`
 - Sobrescrever o bloco de conteúdo `{% block content %}` com o conteúdo da página de contato em `prototipos/contato.html`
+- Corrigir os links das imagens e das URLs para os arquivos estáticos usando a tag `{% static %}` e `{% url %}`
 - Verificar se o link em `templates/components/header.html` para a página de contato está correto
+
+### Configuração de Action e de Segurança do Formulário
+
+- CSRF (Cross-Site Request Forgery) é um tipo de ataque que ocorre quando um invasor envia uma requisição maliciosa 
+- CSRF pode acontecer por meio formulários que não possuem proteção contra CSRF
+- O Django possui um sistema de proteção contra CSRF que é ativado por padrão
+- Para utilizar o sistema de proteção CSRF, é necessário incluir o token CSRF no formulário
+- O token CSRF é gerado dinamicamente pelo Django e é incluído no formulário por meio da template tag `{% csrf_token %}` 
+- Incluir o token CSRF no formulário em `templates/contato.html`
+- Alterar action do formulário para apontar para view 'contato' e o method para POST
+
+```html
+<form action="{% url 'contato' %}" method="post" class="my-10">
+    {% csrf_token %}
+
+```
 
 ### Alterar a view para Processar o Formulário
 
 - No arquivo `padarias/views.py` alterar a view `contato` para processar o formulário enviado pelo usuário
 - Caso a requisição não for do tipo POST, retornar o template `contato.html` com o formulário vazio
-- Caso a requisição for do tipo POST, acessar os dados do formulário por meio do objeto `request.POST` e retornar o template `contato.html` com uma mensagem de sucesso
+- Caso a requisição for do tipo POST, acessar os dados do formulário por meio do objeto `request.POST`, printar os valores no console e retornar o template `contato.html` com uma mensagem de sucesso
 - Para enviar uma mensagem de sucesso para o template, podemos utilizar o método `render` que recebe um dicionário com os dados que queremos enviar para o template como contexto
+- Essa é uma forma de enviar variáveis da `view` para o `template` de modo a tornar o template dinâmico
+- O método `render` recebe o objeto `request`, o nome do template e um dicionário com os dados que queremos enviar para o template como contexto
 
 ```python
 
@@ -857,7 +877,10 @@ def contato(request):
 
         form_message = f"Obrigado pelo seu feedback, {name}! Recebemos sua mensagem e em breve entraremos em contato."
 
-    return render(request, 'contato.html', {'form_message': form_message})
+    context = {
+        'form_message': form_message
+    }
+    return render(request, 'contato.html', context)
 
 ```
 
@@ -899,11 +922,11 @@ def contato(request):
         <fieldset class="fieldset">
           <legend class="fieldset-legend">Qual a sua avaliação da nossa proposta?</legend>
           <div class="rating">
-            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="1 star" value="1" />
-            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="2 star" value="2" />
-            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="3 star" value="3" />
-            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="4 star" value="4" />
-            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="5 star" value="5" />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="1 star" value="1" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="2 star" value="2" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="3 star" value="3" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="4 star" value="4" required />
+            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" aria-label="5 star" value="5" required />
           </div>
         </fieldset>
 
