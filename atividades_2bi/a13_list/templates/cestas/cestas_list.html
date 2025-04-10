@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lista de Cestas{% endblock %}
+
+{% block content %}
+  <div class="hero min-h-[70vh]" style="background-image: url('{% static "images/padaria2.png" %}');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Cestas íncriveis para TODOS os gostos!</h1>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto my-20">
+    <h1 class="text-4xl">Nossas Cestas</h1>
+    <section class="my-10 flex gap-5 flex-wrap justify-center">
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video" src="{% static 'images/cesta.png' %}" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta Matinal Simples</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão...</p>
+          <div class="card-actions justify-end">
+            <a href="cestas_detail.html" class="btn btn-primary">Ver mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video" src="{% static 'images/cesta2.png' %}" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta do Dia a Dia</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão...</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Ver mais</button>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 w-70 shadow-sm">
+        <figure>
+          <img class="aspect-video" src="{% static 'images/cesta3.png' %}" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Cesta Top</h2>
+          <p>Desperte suas manhãs com a Cesta Matinal Simples do Café com Pão...</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Ver mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}
