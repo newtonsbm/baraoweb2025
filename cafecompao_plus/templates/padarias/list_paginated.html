@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Padarias - Café com Pão{% endblock %}
+
+{% block content %}
+  <!-- INICIO DO HERO -->
+  <div class="hero min-h-[70vh]" style="background-image: url({% static 'images/padaria2.png' %});">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="mb-5 text-5xl font-bold">Conheça nossa rede de Padarias!</h1>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO HERO -->
+  <!-- INICIO DO MAIN HOME -->
+  <main class="max-w-4xl mx-auto my-20 p-2">
+    <h1 class="text-4xl">Padarias Conveniadas</h1>
+
+    <!-- Filtros -->
+    <div class="card bg-base-200 shadow-sm my-6">
+      <div class="card-body">
+      <h2 class="card-title"><i class="bi bi-funnel"></i> Filtrar Padarias</h2>
+      <form method="get" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Nome da Padaria</legend>
+          <label class="input input-bordered flex items-center gap-2">
+            <i class="bi bi-shop"></i>
+            {{ filter.form.nome|add_class:"grow" }}
+          </label>
+        </fieldset>
+        
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Telefone</legend>
+            {{ filter.form.has_phone|add_class:"select select-bordered w-full" }}
+        </fieldset>
+        
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Cidade</legend>
+          <select name="cidade" class="select select-bordered w-full">
+            <option value="">Todas as cidades</option>
+            {% for city_name in cities %}
+            <option value="{{ city_name }}" {% if filter.form.cidade.value == city_name %}selected{% endif %}>{{ city_name }}</option>
+            {% endfor %}
+          </select>
+        </fieldset>
+        
+        <div class="form-control flex flex-col justify-end mt-4 col-span-1 md:col-span-2 lg:col-span-3">
+          <div class="flex gap-2 justify-end">
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-search"></i> Aplicar Filtros
+            </button>
+            {% if filter.form.nome.value or filter.form.has_phone.value or filter.form.cidade.value %}
+              <a href="{% url 'padarias_list_paginated' %}" class="btn btn-outline">
+                <i class="bi bi-x-circle"></i> Limpar Filtros
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </form>
+      </div>
+    </div> 
+
+    <section class="my-10 flex flex-col gap-10 ">
+      {% for padaria in padarias %}
+        <div class="card lg:card-side bg-base-100 shadow-sm">
+          <figure class="lg:w-1/2">
+            <img class="aspect-video" src="{{ padaria.imagem.url }}" alt="{{ padaria.nome }}" />
+          </figure>
+          <div class="card-body lg:w-1/2">
+            <h2 class="card-title">{{ padaria.nome }}</h2>
+            <p>{{ padaria.descricao }}</p>
+            <ul>
+              <li><i class="bi bi-map"></i> {{ padaria.endereco.cidade }} / {{ padaria.endereco.estado }}</li>
+              <li><i class="bi bi-envelope"></i> {{ padaria.email }} </li>
+              <li><i class="bi bi-phone"></i> {{ padaria.telefone }}</li>
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+      {% include 'components/pagination.html' %}
+    </section>
+  </main>
+  <!-- FIM DO MAIN HOME -->
+{% endblock %}

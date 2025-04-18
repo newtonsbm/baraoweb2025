@@ -1,0 +1,27 @@
+{% extends 'dashboard/base_logged.html' %}
+{% load static %}
+
+{% block title %}Criar Assinatura - Café com Pão{% endblock %}
+
+{% block dashboard_content %}
+  <h1 class="text-2xl my-4">Criar Assinatura</h1>
+  <form action="{% url 'assinatura_create' %}" method="post" class="space-y-4">
+    {% csrf_token %}
+    <div>
+      <label for="cesta" class="block text-sm font-medium text-gray-700">Escolha a cesta:</label>
+      <select id="cesta" name="cesta" class="select select-bordered w-full max-w-xs">
+        {% for cesta in cestas %}
+          <option value="{{ cesta.id }}">{{ cesta.nome }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="observacoes" class="block text-sm font-medium text-gray-700">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4" class="textarea textarea-bordered w-full" placeholder="Digite suas observações aqui..."></textarea>
+    </div>
+    <div class="flex space-x-4">
+      <button type="submit" class="btn btn-primary">Confirmar Assinatura</button>
+      <a href="{% url 'dashboard_main' %}" class="btn btn-secondary">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}

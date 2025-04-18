@@ -1,0 +1,9 @@
+<div class="btn-group btn-group-vertical lg:btn-group-horizontal">
+  {% if page_obj.has_previous %}
+    <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.previous_page_number }}" class="btn btn-primary">Anterior</a>
+  {% endif %}
+  <span class="btn">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+  {% if page_obj.has_next %}
+    <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.next_page_number }}" class="btn btn-primary">Próxima</a>
+  {% endif %}
+</div>

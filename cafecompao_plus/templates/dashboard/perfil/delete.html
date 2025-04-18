@@ -1,0 +1,48 @@
+{% extends 'dashboard/base_logged.html' %}
+
+{% load static %}
+
+{% block title %}Excluir Perfil - Café com Pão{% endblock %}
+
+{% block dashboard_content %}
+  <div class="max-w-2xl mx-auto my-10 p-4">
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title text-2xl text-error">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          Excluir Perfil
+        </h2>
+        
+        <div class="divider"></div>
+        
+        <div class="alert alert-warning mb-6">
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <span>Esta ação não pode ser desfeita. Todos os seus dados pessoais serão removidos permanentemente.</span>
+        </div>
+        
+        <p class="mb-4">
+          Você está prestes a excluir seu perfil. Ao confirmar, você:
+        </p>
+        
+        <ul class="list-disc list-inside mb-6 space-y-2">
+          <li>Perderá todas as suas informações de perfil</li>
+          <li>Voce mantera seu nome, sua conta e sua assinatura</li>
+          <li>Apenas seus dados pessoais e foto serao removidos</li>
+        </ul>
+        
+        <p class="font-bold mb-6">Tem certeza que deseja continuar?</p>
+        
+        <form method="post" class="flex flex-col md:flex-row gap-3 justify-end">
+          {% csrf_token %}
+          <a href="{% url 'perfil_detail' %}" class="btn btn-outline">
+            <i class="bi bi-arrow-left"></i> Cancelar
+          </a>
+          <button type="submit" class="btn btn-error">
+            <i class="bi bi-trash"></i> Sim, excluir meu perfil
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

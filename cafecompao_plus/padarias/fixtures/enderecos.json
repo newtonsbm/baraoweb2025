@@ -1,0 +1,1192 @@
+[
+    {
+        "model": "padarias.endereco",
+        "pk": 1,
+        "fields": {
+            "rua": "Rua Alegria",
+            "numero": "100",
+            "complemento": "Perto da praça",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14010000",
+            "padaria": 1
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 2,
+        "fields": {
+            "rua": "Rua Sol Nascente",
+            "numero": "200",
+            "complemento": "Ao lado do mercado",
+            "bairro": "Jardim Paulista",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14020000",
+            "padaria": 2
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 3,
+        "fields": {
+            "rua": "Rua Pão Quente",
+            "numero": "300",
+            "complemento": "Próximo ao parque",
+            "bairro": "Vila Seixas",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14030000",
+            "padaria": 3
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 4,
+        "fields": {
+            "rua": "Rua Doce Vida",
+            "numero": "400",
+            "complemento": "Em frente à escola",
+            "bairro": "Sumarezinho",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14040000",
+            "padaria": 4
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 5,
+        "fields": {
+            "rua": "Rua Bom Dia",
+            "numero": "500",
+            "complemento": "Perto do hospital",
+            "bairro": "Jardim Botânico",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14050000",
+            "padaria": 5
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 6,
+        "fields": {
+            "rua": "Av. Independência",
+            "numero": "1200",
+            "complemento": "Sala 3",
+            "bairro": "Alto da Boa Vista",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14025400",
+            "padaria": 6
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 7,
+        "fields": {
+            "rua": "Rua Barão do Amazonas",
+            "numero": "55",
+            "complemento": "",
+            "bairro": "Jardim Sumaré",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14025110",
+            "padaria": 7
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 8,
+        "fields": {
+            "rua": "Av. Portugal",
+            "numero": "1578",
+            "complemento": "Loja 2",
+            "bairro": "Jardim São Luiz",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14020380",
+            "padaria": 8
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 9,
+        "fields": {
+            "rua": "Av. Presidente Vargas",
+            "numero": "2121",
+            "complemento": "",
+            "bairro": "Jardim América",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14020260",
+            "padaria": 9
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 10,
+        "fields": {
+            "rua": "Rua Mariana Junqueira",
+            "numero": "33",
+            "complemento": "Térreo",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14015110",
+            "padaria": 10
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 11,
+        "fields": {
+            "rua": "Av. Dom Pedro I",
+            "numero": "1320",
+            "complemento": "",
+            "bairro": "Ipiranga",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14030000",
+            "padaria": 11
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 12,
+        "fields": {
+            "rua": "Rua Sete de Setembro",
+            "numero": "789",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14010130",
+            "padaria": 12
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 13,
+        "fields": {
+            "rua": "Av. João Fiúsa",
+            "numero": "1500",
+            "complemento": "Loja 32",
+            "bairro": "Alto da Boa Vista",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14025250",
+            "padaria": 13
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 14,
+        "fields": {
+            "rua": "Av. Nove de Julho",
+            "numero": "244",
+            "complemento": "",
+            "bairro": "Jardim Sumaré",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14025000",
+            "padaria": 14
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 15,
+        "fields": {
+            "rua": "Rua Visconde de Inhaúma",
+            "numero": "580",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14010100",
+            "padaria": 15
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 16,
+        "fields": {
+            "rua": "Av. Carlos Gomes",
+            "numero": "150",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14400126",
+            "padaria": 16
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 17,
+        "fields": {
+            "rua": "Rua do Comércio",
+            "numero": "1234",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14400350",
+            "padaria": 17
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 18,
+        "fields": {
+            "rua": "Av. Major Nicácio",
+            "numero": "433",
+            "complemento": "Loja 2",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14401130",
+            "padaria": 18
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 19,
+        "fields": {
+            "rua": "Rua General Osório",
+            "numero": "890",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14400010",
+            "padaria": 19
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 20,
+        "fields": {
+            "rua": "Av. Dr. Ismael Alonso y Alonso",
+            "numero": "789",
+            "complemento": "",
+            "bairro": "Nova Franca",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14404600",
+            "padaria": 20
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 21,
+        "fields": {
+            "rua": "Av. Rio Claro",
+            "numero": "456",
+            "complemento": "",
+            "bairro": "Jardim Francano",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14405123",
+            "padaria": 21
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 22,
+        "fields": {
+            "rua": "Av. Orlando Dompieri",
+            "numero": "275",
+            "complemento": "",
+            "bairro": "Jardim Petraglia",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14409170",
+            "padaria": 22
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 23,
+        "fields": {
+            "rua": "Rua do Comércio",
+            "numero": "700",
+            "complemento": "Térreo",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14400140",
+            "padaria": 23
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 24,
+        "fields": {
+            "rua": "Av. São Vicente",
+            "numero": "200",
+            "complemento": "",
+            "bairro": "Jardim São Luiz",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14403000",
+            "padaria": 24
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 25,
+        "fields": {
+            "rua": "Rua Voluntários da Franca",
+            "numero": "1900",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14400490",
+            "padaria": 25
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 26,
+        "fields": {
+            "rua": "Av. Getúlio Vargas",
+            "numero": "110",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14160000",
+            "padaria": 26
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 27,
+        "fields": {
+            "rua": "Rua José Bonifácio",
+            "numero": "565",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14160490",
+            "padaria": 27
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 28,
+        "fields": {
+            "rua": "Av. Dr. Eduardo Andrea Matarazzo",
+            "numero": "4563",
+            "complemento": "",
+            "bairro": "Jardim Nova Sertãozinho",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14176400",
+            "padaria": 28
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 29,
+        "fields": {
+            "rua": "Rua Dr. Pio Dufles",
+            "numero": "512",
+            "complemento": "",
+            "bairro": "Jardim Soljumar",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14170590",
+            "padaria": 29
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 30,
+        "fields": {
+            "rua": "Av. Antonio Paschoal",
+            "numero": "1760",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14170250",
+            "padaria": 30
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 31,
+        "fields": {
+            "rua": "Rua Barão do Rio Branco",
+            "numero": "555",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14160010",
+            "padaria": 31
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 32,
+        "fields": {
+            "rua": "Av. Nossa Senhora Aparecida",
+            "numero": "780",
+            "complemento": "",
+            "bairro": "Jardim São José",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14169090",
+            "padaria": 32
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 33,
+        "fields": {
+            "rua": "Rua Expedicionários do Brasil",
+            "numero": "333",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14160400",
+            "padaria": 33
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 34,
+        "fields": {
+            "rua": "Rua José Martimiano da Silva",
+            "numero": "2341",
+            "complemento": "",
+            "bairro": "Jardim Botânico",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14176180",
+            "padaria": 34
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 35,
+        "fields": {
+            "rua": "Av. Marginal",
+            "numero": "2500",
+            "complemento": "",
+            "bairro": "Jardim Alvorada",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14177000",
+            "padaria": 35
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 36,
+        "fields": {
+            "rua": "Rua Dr. Cesário Motta",
+            "numero": "340",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870090",
+            "padaria": 36
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 37,
+        "fields": {
+            "rua": "Av. Pintos",
+            "numero": "1520",
+            "complemento": "",
+            "bairro": "Aparecida",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870750",
+            "padaria": 37
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 38,
+        "fields": {
+            "rua": "Rua Rui Barbosa",
+            "numero": "660",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870-270",
+            "padaria": 38
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 39,
+        "fields": {
+            "rua": "Av. Carlos Berchieri",
+            "numero": "1200",
+            "complemento": "",
+            "bairro": "Nova Jaboticabal",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14887352",
+            "padaria": 39
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 40,
+        "fields": {
+            "rua": "Av. Major Novaes",
+            "numero": "155",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870100",
+            "padaria": 40
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 41,
+        "fields": {
+            "rua": "Rua Barão do Rio Branco",
+            "numero": "240",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870330",
+            "padaria": 41
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 42,
+        "fields": {
+            "rua": "Av. José da Costa",
+            "numero": "1850",
+            "complemento": "",
+            "bairro": "Sorocabano",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14872140",
+            "padaria": 42
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 43,
+        "fields": {
+            "rua": "Rua 24 de Maio",
+            "numero": "670",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870350",
+            "padaria": 43
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 44,
+        "fields": {
+            "rua": "Av. General Osório",
+            "numero": "542",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870100",
+            "padaria": 44
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 45,
+        "fields": {
+            "rua": "Rua Monteiro Lobato",
+            "numero": "128",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870190",
+            "padaria": 45
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 46,
+        "fields": {
+            "rua": "Av. Dr. José Bonifácio Coutinho Nogueira",
+            "numero": "1400",
+            "complemento": "",
+            "bairro": "Jardim Madalena",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13091611",
+            "padaria": 46
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 47,
+        "fields": {
+            "rua": "Rua Barão de Jaguara",
+            "numero": "1370",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13015002",
+            "padaria": 47
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 48,
+        "fields": {
+            "rua": "Av. Norte-Sul",
+            "numero": "2250",
+            "complemento": "Loja 12",
+            "bairro": "Parque Industrial",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13031770",
+            "padaria": 48
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 49,
+        "fields": {
+            "rua": "Av. John Boyd Dunlop",
+            "numero": "12380",
+            "complemento": "",
+            "bairro": "Vila Padre Anchieta",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13034685",
+            "padaria": 49
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 50,
+        "fields": {
+            "rua": "Rua Coronel Quirino",
+            "numero": "1344",
+            "complemento": "",
+            "bairro": "Cambuí",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13025002",
+            "padaria": 50
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 51,
+        "fields": {
+            "rua": "Av. Dr. Theodureto de Almeida Camargo",
+            "numero": "1246",
+            "complemento": "",
+            "bairro": "Jardim das Paineiras",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13092030",
+            "padaria": 51
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 52,
+        "fields": {
+            "rua": "Rua Francisco Glicério",
+            "numero": "1058",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13012100",
+            "padaria": 52
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 53,
+        "fields": {
+            "rua": "Av. Brasil",
+            "numero": "760",
+            "complemento": "",
+            "bairro": "Jardim Brasil",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13073012",
+            "padaria": 53
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 54,
+        "fields": {
+            "rua": "Av. Campos Salles",
+            "numero": "868",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13010081",
+            "padaria": 54
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 55,
+        "fields": {
+            "rua": "Rua Conceição",
+            "numero": "233",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13010050",
+            "padaria": 55
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 56,
+        "fields": {
+            "rua": "Rua Dr. César Silveira Lopes",
+            "numero": "43",
+            "complemento": "",
+            "bairro": "Jardim Chapadão",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13070056",
+            "padaria": 56
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 57,
+        "fields": {
+            "rua": "Av. das Amoreiras",
+            "numero": "1450",
+            "complemento": "",
+            "bairro": "Jardim do Lago",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13050-102",
+            "padaria": 57
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 58,
+        "fields": {
+            "rua": "Av. Francisco José de Camargo Andrade",
+            "numero": "786",
+            "complemento": "",
+            "bairro": "Jardim Chapadão",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13070055",
+            "padaria": 58
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 59,
+        "fields": {
+            "rua": "Av. Barão de Itapura",
+            "numero": "2294",
+            "complemento": "",
+            "bairro": "Botafogo",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13073000",
+            "padaria": 59
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 60,
+        "fields": {
+            "rua": "Av. Dr. Moraes Sales",
+            "numero": "1230",
+            "complemento": "",
+            "bairro": "Cambuí",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13010002",
+            "padaria": 60
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 61,
+        "fields": {
+            "rua": "Av. Andrade Neves",
+            "numero": "611",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13013161",
+            "padaria": 61
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 62,
+        "fields": {
+            "rua": "Av. Imperatriz Leopoldina",
+            "numero": "1150",
+            "complemento": "",
+            "bairro": "Nova Americana",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13465580",
+            "padaria": 62
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 63,
+        "fields": {
+            "rua": "Rua Washington Luiz",
+            "numero": "635",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13465000",
+            "padaria": 63
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 64,
+        "fields": {
+            "rua": "Av. Brasil",
+            "numero": "1900",
+            "complemento": "",
+            "bairro": "Parque Novo Mundo",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13466150",
+            "padaria": 64
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 65,
+        "fields": {
+            "rua": "Av. Cillos",
+            "numero": "2310",
+            "complemento": "",
+            "bairro": "Vila Jones",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13465390",
+            "padaria": 65
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 66,
+        "fields": {
+            "rua": "Rua 30 de Julho",
+            "numero": "701",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13465500",
+            "padaria": 66
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 67,
+        "fields": {
+            "rua": "Av. Paschoal Ardito",
+            "numero": "1455",
+            "complemento": "",
+            "bairro": "Jardim São Pedro",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13473010",
+            "padaria": 67
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 68,
+        "fields": {
+            "rua": "Rua Carioba",
+            "numero": "33",
+            "complemento": "",
+            "bairro": "Carioba",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13465642",
+            "padaria": 68
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 69,
+        "fields": {
+            "rua": "Av. Antônio Pinto Duarte",
+            "numero": "1700",
+            "complemento": "",
+            "bairro": "Jardim Ipiranga",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13468680",
+            "padaria": 69
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 70,
+        "fields": {
+            "rua": "Av. Nossa Senhora de Fátima",
+            "numero": "450",
+            "complemento": "",
+            "bairro": "Vila Israel",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13478540",
+            "padaria": 70
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 71,
+        "fields": {
+            "rua": "Rua dos Colibris",
+            "numero": "1820",
+            "complemento": "",
+            "bairro": "Jardim dos Lírios",
+            "cidade": "Americana",
+            "estado": "SP",
+            "cep": "13469180",
+            "padaria": 71
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 72,
+        "fields": {
+            "rua": "Rua São Joaquim",
+            "numero": "2000",
+            "complemento": "",
+            "bairro": "Santa Cecília",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14076360",
+            "padaria": 72
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 73,
+        "fields": {
+            "rua": "Av. Patriarca",
+            "numero": "235",
+            "complemento": "",
+            "bairro": "Ribeirânia",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14096260",
+            "padaria": 73
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 74,
+        "fields": {
+            "rua": "Rua Capitão Salomão",
+            "numero": "38",
+            "complemento": "",
+            "bairro": "Campos Elíseos",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14080210",
+            "padaria": 74
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 75,
+        "fields": {
+            "rua": "Av. Caramuru",
+            "numero": "1280",
+            "complemento": "",
+            "bairro": "República",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14030000",
+            "padaria": 75
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 76,
+        "fields": {
+            "rua": "Av. Dr. Francisco Junqueira",
+            "numero": "1255",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14015000",
+            "padaria": 76
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 77,
+        "fields": {
+            "rua": "Rua Garibaldi",
+            "numero": "1340",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Jaboticabal",
+            "estado": "SP",
+            "cep": "14870060",
+            "padaria": 77
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 78,
+        "fields": {
+            "rua": "Rua Waldomiro Costa e Silva",
+            "numero": "390",
+            "complemento": "",
+            "bairro": "Vila Nova",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14401478",
+            "padaria": 78
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 79,
+        "fields": {
+            "rua": "Av. Romeu Strazzi",
+            "numero": "325",
+            "complemento": "",
+            "bairro": "Vila Tamandaré",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14161280",
+            "padaria": 79
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 80,
+        "fields": {
+            "rua": "Rua Maria Quitéria",
+            "numero": "265",
+            "complemento": "",
+            "bairro": "Jardim América",
+            "cidade": "Campinas",
+            "estado": "SP",
+            "cep": "13050001",
+            "padaria": 80
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 81,
+        "fields": {
+            "rua": "Av. Rebouças",
+            "numero": "1223",
+            "complemento": "",
+            "bairro": "Jardim Paulista",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14090800",
+            "padaria": 81
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 82,
+        "fields": {
+            "rua": "Rua Américo Brasiliense",
+            "numero": "780",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14015050",
+            "padaria": 82
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 83,
+        "fields": {
+            "rua": "Av. Bady Bassitt",
+            "numero": "4270",
+            "complemento": "",
+            "bairro": "Centro",
+            "cidade": "Sertãozinho",
+            "estado": "SP",
+            "cep": "14160900",
+            "padaria": 83
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 84,
+        "fields": {
+            "rua": "Av. Presidente Kennedy",
+            "numero": "1195",
+            "complemento": "",
+            "bairro": "Presidente Kennedy",
+            "cidade": "Franca",
+            "estado": "SP",
+            "cep": "14401100",
+            "padaria": 84
+        }
+    },
+    {
+        "model": "padarias.endereco",
+        "pk": 85,
+        "fields": {
+            "rua": "Rua Tenente Catão Roxo",
+            "numero": "350",
+            "complemento": "",
+            "bairro": "Vila Monte Alegre",
+            "cidade": "Ribeirão Preto",
+            "estado": "SP",
+            "cep": "14051140",
+            "padaria": 85
+        }
+    }
+]

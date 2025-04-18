@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ padaria.nome }} - Café com Pão{% endblock %}
+
+{% block content %}
+  <div class="container mx-auto py-10 px-4">
+    <div class="flex items-center gap-2 text-sm mb-6">
+      <a href="{% url 'home' %}" class="hover:underline">Início</a>
+      <i class="bi bi-chevron-right text-xs"></i>
+      <a href="{% url 'padarias_list' %}" class="hover:underline">Padarias</a>
+      <i class="bi bi-chevron-right text-xs"></i>
+      <span>{{ padaria.nome }}</span>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <!-- Imagem da Padaria -->
+      <div class="bg-base-200 rounded-lg overflow-hidden shadow-lg">
+        <img 
+          src="{{ padaria.imagem.url }}" 
+          alt="{{ padaria.nome }}" 
+          class="h-full object-cover"
+        >
+      </div>
+      
+      <!-- Informações da Padaria -->
+      <div>
+        <h1 class="text-4xl font-bold mb-4">{{ padaria.nome }}</h1>
+        <p class="text-lg mb-6">{{ padaria.descricao }}</p>
+        
+        <div class="divider"></div>
+        
+        <h2 class="text-xl font-bold mb-3">Informações de Contato</h2>
+        <div class="space-y-2 mb-6">
+          {% if padaria.telefone %}
+            <p><i class="bi bi-phone text-primary mr-2"></i> {{ padaria.telefone }}</p>
+          {% endif %}
+          {% if padaria.email %}
+            <p><i class="bi bi-envelope text-primary mr-2"></i> {{ padaria.email }}</p>
+          {% endif %}
+        </div>
+        
+        {% if padaria.endereco %}
+          <h2 class="text-xl font-bold mb-3">Endereço</h2>
+          <div class="p-4 bg-base-200 rounded-lg mb-6">
+            <p>{{ padaria.endereco.rua }}, {{ padaria.endereco.numero }}</p>
+            {% if padaria.endereco.complemento %}
+              <p>{{ padaria.endereco.complemento }}</p>
+            {% endif %}
+            <p>{{ padaria.endereco.bairro }}, {{ padaria.endereco.cidade }} - {{ padaria.endereco.estado }}</p>
+            <p>CEP: {{ padaria.endereco.cep }}</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    <!-- Cestas Disponíveis -->
+    {% if padaria.cestas.all %}
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold mb-6">Cestas Disponíveis</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {% for cesta in padaria.cestas.all %}
+            <div class="card bg-base-100 shadow-xl">
+              <figure>
+                <img 
+                  src="{{ cesta.imagem.url }}" 
+                  alt="{{ cesta.nome }}" 
+                  class="w-full h-48 object-cover"
+                >
+              </figure>
+              <div class="card-body">
+                <h3 class="card-title">{{ cesta.nome }}</h3>
+                <p>{{ cesta.descricao|truncatechars:100 }}</p>
+                <div class="mt-4">
+                  <span class="font-bold text-lg">R$ {{ cesta.preco }}</span>
+                </div>
+                <div class="card-actions justify-end mt-2">
+                  <a href="{% url 'cestas_detail' cesta.id %}" class="btn btn-primary btn-sm">
+                    <i class="bi bi-eye"></i> Ver Detalhes
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    
+    <!-- Botão de Voltar -->
+    <div class="mt-10">
+      <a href="{% url 'padarias_list' %}" class="btn btn-outline">
+        <i class="bi bi-arrow-left"></i> Voltar para Padarias
+      </a>
+    </div>
+  </div>
+{% endblock %}

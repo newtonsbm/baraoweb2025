@@ -1,0 +1,19 @@
+{% extends 'dashboard/base_logged.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Dashboard - Café com Pão{% endblock %}
+
+{% block dashboard_content %}
+  <h1 class="text-4xl mb-4">Editar seu Perfil</h1>
+  <form method="post" action="{% url 'perfil_update' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form | crispy }}
+    {{ form | crispy }}
+    <h2 class="text-2xl mb-4">Endereço</h2>
+    {{ endereco_form | crispy }}
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+{% endblock %}
+

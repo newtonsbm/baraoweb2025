@@ -1,0 +1,12 @@
+Django
+pillow
+django-extensions
+django-browser-reload
+djangorestframework
+drf-spectacular
+django-filter
+django-widget-tweaks
+django-cors-headers
+django-crispy-forms
+crispy-tailwind
+requests

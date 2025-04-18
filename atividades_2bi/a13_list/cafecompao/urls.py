@@ -27,5 +27,6 @@ urlpatterns = [
     path('contato/', padarias_views.contato, name='contato'),
     path('padarias/', padarias_views.padarias_list, name='padarias_list'),
     path('cestas/', padarias_views.cestas_list, name='cestas_list'),
+    path('cestas/<int:pk>/', padarias_views.cestas_detail, name='cestas_detail'),
     path("__reload__/", include("django_browser_reload.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

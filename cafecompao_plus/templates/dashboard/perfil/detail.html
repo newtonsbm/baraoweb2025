@@ -1,0 +1,196 @@
+{% extends 'dashboard/base_logged.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Meu Perfil{% endblock %}
+
+{% block dashboard_content %}
+  <div class="container mx-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">Meu Perfil</h1>
+      <a href="{% url 'perfil_update' %}" class="btn btn-primary">
+        <i class="bi bi-pencil-square"></i> Editar Perfil
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card de Informações Básicas/Foto -->
+      <div class="card bg-base-100 shadow-lg col-span-1">
+        <div class="card-body items-center text-center">
+          {% if user.perfil.foto_perfil %}
+            <img src="{{ user.perfil.foto_perfil.url }}" alt="{{ user.get_full_name }}" class="mask mask-circle w-32 h-32 mx-auto mb-4">
+          {% else %}
+            <div class="avatar placeholder">
+              <div class="bg-primary text-primary-content rounded-full w-32 h-32">
+                <span class="text-3xl">{{ user.first_name|first|default:"U" }}{{ user.last_name|first|default:"" }}</span>
+              </div>
+            </div>
+          {% endif %}
+          <h2 class="card-title text-xl">{{ user.get_full_name|default:user.username }}</h2>
+          <p class="text-gray-500">{{ user.email }}</p>
+          {% if user.perfil %}
+            <p class="badge badge-outline">Membro desde {{ user.perfil.data_cadastro|date:"d/m/Y"|default:"Não informado" }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Card de Detalhes do Perfil -->
+      <div class="card bg-base-100 shadow-lg col-span-2">
+        <div class="card-body">
+          <h2 class="card-title">Informações Pessoais</h2>
+          <div class="divider"></div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 class="font-semibold text-sm text-gray-500">Nome Completo</h3>
+              <p>{{ user.get_full_name|default:"Não informado" }}</p>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-sm text-gray-500">E-mail</h3>
+              <p>{{ user.email }}</p>
+            </div>
+            
+            {% if user.perfil %}
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Telefone</h3>
+                <p>{{ user.perfil.telefone|default:"Não informado" }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">CPF</h3>
+                <p>{{ user.perfil.cpf|default:"Não informado" }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Data de Nascimento</h3>
+                <p>{{ user.perfil.data_nascimento|date:"d/m/Y"|default:"Não informada" }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Profissão</h3>
+                <p>{{ user.perfil.profissao|default:"Não informada" }}</p>
+              </div>
+            {% endif %}
+          </div>
+
+          {% if user.perfil and user.perfil.endereco %}
+            <h2 class="card-title mt-6">Endereço</h2>
+            <div class="divider"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Rua</h3>
+                <p>{{ user.perfil.endereco.rua }}, {{ user.perfil.endereco.numero }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Complemento</h3>
+                <p>{{ user.perfil.endereco.complemento|default:"Não informado" }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Bairro</h3>
+                <p>{{ user.perfil.endereco.bairro|default:"Não informado" }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">Cidade/UF</h3>
+                <p>{{ user.perfil.endereco.cidade }}/{{ user.perfil.endereco.estado }}</p>
+              </div>
+              
+              <div>
+                <h3 class="font-semibold text-sm text-gray-500">CEP</h3>
+                <p>{{ user.perfil.endereco.cep }}</p>
+              </div>
+            </div>
+          {% else %}
+            <div class="alert alert-info mt-6">
+              <i class="bi bi-info-circle"></i>
+              <span>Nenhum endereço cadastrado.</span>
+            </div>
+          {% endif %}
+          
+          <div class="card-actions justify-end mt-6">
+            <a href="{% url 'perfil_update' %}" class="btn btn-outline btn-primary">
+              <i class="bi bi-pencil-square"></i> Editar Perfil
+            </a>
+            <a href="{% url 'perfil_delete' %}" class="btn btn-outline btn-error">
+              <i class="bi bi-trash"></i> Excluir Perfil
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% if user.assinatura %}
+      <!-- Card de Assinaturas -->
+      <div class="card bg-base-100 shadow-lg mt-6">
+        <div class="card-body">
+          <h2 class="card-title">Minha Assinatura</h2>
+          <div class="divider"></div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-2">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div class="w-full sm:w-1/3">
+                  <img 
+                    src="{{ user.assinatura.cesta.imagem.url|default:'https://via.placeholder.com/200' }}"
+                    alt="{{ user.assinatura.cesta.nome }}"
+                    class="rounded-lg w-full h-auto object-cover"
+                  >
+                </div>
+                <div class="w-full sm:w-2/3">
+                  <h3 class="text-xl font-bold">{{ user.assinatura.cesta.nome }}</h3>
+                  <p class="mb-2">{{ user.assinatura.cesta.descricao }}</p>
+                  <div class="badge badge-accent mb-2">{{ user.assinatura.cesta.get_nivel_display }}</div>
+                  <p class="font-bold text-primary text-xl">R$ {{ user.assinatura.cesta.preco }}</p>
+                </div>
+              </div>
+
+              {% if user.assinatura.observacao %}
+                <div class="mt-4">
+                  <h3 class="font-semibold">Observações:</h3>
+                  <p>{{ user.assinatura.observacao }}</p>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="card bg-base-200 p-4">
+              <h3 class="font-semibold">Detalhes da assinatura</h3>
+              <div class="divider my-2"></div>
+              <p><span class="font-semibold">Data de início:</span> {{ user.assinatura.data_inicio|date:"d/m/Y" }}</p>
+              <p><span class="font-semibold">Status:</span> <span class="badge badge-success">Ativa</span></p>
+              <div class="card-actions justify-end mt-4">
+                <a href="{% url 'assinatura_update' %}" class="btn btn-sm btn-primary">
+                  <i class="bi bi-pencil"></i> Alterar
+                </a>
+                <a href="{% url 'assinatura_delete' %}" class="btn btn-sm btn-outline btn-error">
+                  <i class="bi bi-x-circle"></i> Cancelar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <!-- Convite para assinatura -->
+      <div class="card bg-base-100 shadow-lg mt-6">
+        <div class="card-body">
+          <h2 class="card-title">Assinatura</h2>
+          <div class="divider"></div>
+          
+          <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i>
+            <span>Você ainda não possui uma assinatura ativa.</span>
+          </div>
+          
+          <div class="card-actions justify-end mt-4">
+            <a href="{% url 'assinatura_create' %}" class="btn btn-primary">
+              <i class="bi bi-plus-circle"></i> Assinar Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

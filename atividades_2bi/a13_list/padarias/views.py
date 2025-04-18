@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Feedback
+from .models import Feedback, Cesta
 
 
 def home(request):
@@ -47,4 +47,15 @@ def padarias_list(request):
     return render(request, 'padarias/padarias_list.html')
 
 def cestas_list(request):
-    return render(request, 'cestas/cestas_list.html')
+    cestas = Cesta.objects.all()
+    context = {
+        'cestas': cestas
+    }
+    return render(request, 'cestas/cestas_list.html', context)
+
+def cestas_detail(request, pk):
+    cesta = Cesta.objects.get(pk=pk)
+    context = {
+        'cesta': cesta
+    }
+    return render(request, 'cestas/cestas_detail.html', context)
