@@ -1,0 +1,23 @@
+{% extends 'dashboard/base_logged.html' %}
+{% load static %}
+
+{% block title %}Cancelar Assinatura - Café com Pão{% endblock %}
+
+{% block dashboard_content %}
+  <div class="">
+    <h2 class="text-xl font-bold">Plano Atual</h2>
+    <p>Cesta: <span class="font-medium">{{ assinatura.cesta.nome }}</span></p>
+    <p>Valor: <span class="font-medium">R$ {{ assinatura.cesta.preco }}</span></p>
+    <p>Data de Início: <span class="font-medium">{{ assinatura.data_inicio }}</span></p>
+    <div class="mt-6">
+      <p class="text-lg">Ops! 😅</p>
+      <p class="text-lg">Tem certeza de que quer dar tchau para as delícias matinais do Café com Pão?</p>
+      <p class="mt-4">Se mudar de ideia, estamos aqui para te receber de volta com pães quentinhos e cafés especiais. 🥐</p>
+    </div>
+    <form action="{% url 'assinatura_delete' %}" method="post" class="flex space-x-4 mt-6">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary">Confirmar Cancelamento</button>
+      <a href="{% url 'dashboard_main' %}" class="btn btn-secondary">Voltar ao Menu Principal</a>
+    </form>
+  </div>
+{% endblock %}
