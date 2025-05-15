@@ -9,6 +9,8 @@ from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Padaria, Cesta, Assinatura, Perfil
 from .filters import PadariaFilter
 from .forms import PerfilForm, UserForm, EnderecoForm
@@ -59,26 +61,26 @@ def cestas_list(request):
     return render(request, 'cestas/list.html', context=context)
 
 
+@csrf_exempt
 def contato(request):
-
-    form_message = None
-
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         rating = request.POST.get('rating')
-        message = request.POST.get('message')
+        message_text = request.POST.get('message')  
 
-        # Simulate email handling by printing to console
+        print(f"Received contact form submission via API:")
         print(f"Email de {name} ({email})")
         print(f"Assunto: {subject}")
         print(f"Avaliação: {rating} estrelas")
-        print(f"Mensagem: {message}")
+        print(f"Mensagem: {message_text}")
 
-        form_message = f"Obrigado por entrar em contato, {name}! Recebemos sua mensagem e em breve entraremos em contato."
 
-    return render(request, 'contato.html', {'form_message': form_message})
+        response_message = f"Obrigado por entrar em contato, {name}! Recebemos sua mensagem e em breve entraremos em contato."
+        return JsonResponse({'message': response_message, 'name': name}, status=200)
+    
+    return JsonResponse({'error': 'Invalid request method. Only POST is allowed.'}, status=405)
 
 
 def cestas_detail(request, pk):
